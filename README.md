@@ -2,8 +2,8 @@
 
 
 Creado en Java
-![java-bj-banner](https://digitalsevilla.com/wp-content/uploads/2022/02/Captura-de-pantalla-2022-02-03-a-las-10.33.57.png
-)
+Codigo en: ...src/blackJack
+![java-bj-banner](https://juegos.as.com/arenaxstorage-blob/arenax-games/BlackJack/0.51/build/resources/assets/thumbs/secondary-thumb2x.jpg)
 
 
 
