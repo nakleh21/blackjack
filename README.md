@@ -4,7 +4,7 @@
 Creado en Java
 Codigo en: ...src/blackJack
 
-![java-bj-banner]([https://juegos.as.com/arenaxstorage-blob/arenax-games/BlackJack/0.51/build/resources/assets/thumbs/secondary-thumb2x.jpg](https://play-lh.googleusercontent.com/009hpXoLRxULWBEF8VsHnNTjFrOQVFKfkQfIxZcDGWtVSZEU5mKtSJyy3Zv3pxVcZQ))
+![java-bj-banner]([https://media.istockphoto.com/photos/cards-picture-id172872767?k=20&m=172872767&s=612x612&w=0&h=ScrvJ-iZLQIf3pxNSjlsN82TcHqVrFHS0TwgUneigbg=))
 
 
 
