@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+
 public class Dealer {
 //atributos
 	String name;
@@ -81,8 +82,7 @@ public class Dealer {
 			int remove=baraja.remove(baraja.size()-1);//remover 2 veces el ultimo item de la baraja
 			mano.add(remove);//agragar los elementos removidos a la mano del jugador	
 		} 
-		System.out.println("--------JUGADOR------");
-		System.out.println("JUGADOR: Tienes: " + mano);//mostrar mano
+		
 		sumarJ();
 		System.out.println("--------JUGADOR--------");
 	}
@@ -93,9 +93,8 @@ public class Dealer {
 			int remove=baraja.remove(baraja.size()-1);//remover 2 veces el ultimo item de la baraja
 			manoDealer.add(remove);//agragar los elementos removidos a la mano del jugador
 		}
-		System.out.println();
-		System.out.println("--------DEALER------");
-		System.out.println("DEALER: Tienes: " + manoDealer);//mostrar mano
+	
+		
 		sumarD();
 		System.out.println("--------DEALER------");
 
@@ -110,7 +109,7 @@ public class Dealer {
 		String respuesta;
 		Scanner sc = new Scanner(System.in);
 		System.out.println();
-		System.out.println("JUGADOR DESEAS MAS CARTAS? 1=SI/2=NO");
+		System.out.println("***JUGADOR DESEAS MAS CARTAS? 1=SI/2=NO");
 		respuesta = sc.next();
 		respuesta.toUpperCase();
 		
@@ -140,15 +139,19 @@ public class Dealer {
 	static void sumarJ() {
 		
 		Object[] objects = mano.toArray();
+		System.out.println(" ");
+		System.out.println("--------JUGADOR------");
 		System.out.println("Mano Jugador :" +mano);
 		totalManoJ=0;
 		for (int i : mano)
 			totalManoJ += i;
 		System.out.println("Mano Jugador TOTAL:" + totalManoJ);
+		
 		if (totalManoJ >=  22) {
 			quienGana();
 			System.exit(0);
 		}
+		
 	}
 
 // funcion con switch para tomar mas cartas
@@ -156,7 +159,7 @@ public class Dealer {
 			
 			String respuesta;
 			Scanner sc = new Scanner(System.in);
-			System.out.println("DEALER DESEAS MAS CARTAS? 1=SI/2=NO");
+			System.out.println("***DEALER DESEAS MAS CARTAS? 1=SI/2=NO");
 			respuesta = sc.next();
 			respuesta.toUpperCase();
 			
@@ -182,13 +185,15 @@ public class Dealer {
 	
 //sumar cartas de dealer
 	static void sumarD() {
-		
+		System.out.println(" ");
+		System.out.println("--------DEALER------");
 		Object[] objects = manoDealer.toArray();
 		System.out.println("Mano Dealer :" +manoDealer);
 		totalManoD=0;
 		for (int i : manoDealer)
 			totalManoD += i;
 		System.out.println("Mano Dealer TOTAL:" + totalManoD);
+		
 		if (totalManoD >=  22) {
 			quienGana();
 			System.exit(0);
@@ -201,9 +206,12 @@ public class Dealer {
 	
 //metodo para ver la baraja restante, y las manos
 	void mostrarCartas() {
-		 System.out.println("Baraja " +baraja);
+		System.out.println(" ");
+		System.out.println("--------RESULTADO------");
+		System.out.println("Baraja " +baraja);
 		System.out.println("JUGADOR: " +totalManoJ);
 		System.out.println("DEALER: " +totalManoD);
+		System.out.println("--------RESULTADO------");
 	}
 	
 	
@@ -213,29 +221,41 @@ static // metodo para comprar valores y ver quien gana
 		
 		
 		if(totalManoJ>=22) {
+			
 			System.out.println("JUGADOR Perdio: SE PASO DE 21 :(");
-			System.out.println("Gana Dealer con: " + totalManoD)
-			;
+			System.out.println("Gana Dealer con: " + totalManoD);
+			
 		}
 		if(totalManoD>=22 ) {
+			
 			System.out.println("Dealer Perdio: SE PASO DE 21 :(");
 			System.out.println("Gana Jugador con: " + totalManoJ);
+			
 		}
 		else if(totalManoJ>totalManoD && totalManoJ<=21 ) {
+			
 			System.out.println("Gana Jugador con: " + totalManoJ);
+			
 
 		}
 		else if(totalManoJ<totalManoD && totalManoD<=21) {
+			
 			System.out.println("Gana Dealer con: " + totalManoD);
+			
 
 		}
 		
 		else if(totalManoJ==totalManoD){
+			
 			System.out.println("Empate");
+			
 		}
-
+		
 	}
+
+
 	
 }
+
 
 
