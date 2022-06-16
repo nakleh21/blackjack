@@ -2,7 +2,7 @@ package blackJack;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-
+import java.awt.Toolkit;
 
 public class Dealer {
 //atributos
@@ -71,6 +71,7 @@ public class Dealer {
 		System.out.println("============================================================================================================================================");
 		System.out.println("Baraja ordenada " +baraja);//llamar a la baraja ordenada
 		System.out.println("============================================================================================================================================");
+		Collections.shuffle(baraja);//mezclar
 		Collections.shuffle(baraja);//mezclar
 		System.out.println("Baraja Mezclada " + baraja);//llamar a la baraja mezclada
 		System.out.println("============================================================================================================================================");
@@ -250,12 +251,6 @@ static // metodo para comprar valores y ver quien gana
 			System.out.println("Empate");
 			
 		}
-		
+		Toolkit.getDefaultToolkit().beep();//beep sound windows
 	}
-
-
-	
 }
-
-
-
